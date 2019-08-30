@@ -1,4 +1,4 @@
-package com.service;
+package com.csj.service;
 
 import com.github.pagehelper.PageInfo;
 import tk.mybatis.mapper.common.BaseMapper;

@@ -22,7 +22,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>../log/purchase/${DEFAULT_APP_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>../log/${DEFAULT_APP_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- 每产生一个日志文件，该日志文件的保存期限为30天 -->
             <maxHistory>30</maxHistory>
             <totalSizeCap>5GB</totalSizeCap>
@@ -37,10 +37,10 @@
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
     </logger>-->
-    <logger name="com.mapper" level="DEBUG" additivity="false">
+   <!-- <logger name="com.mapper" level="DEBUG" additivity="false">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>
-    </logger>
+    </logger>-->
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE"/>

@@ -1,6 +1,6 @@
-package com.service;
+package com.csj.service;
 
-import com.entity.OrderInfo;
+import com.csj.entity.OrderInfo;
 
 import java.util.List;
 

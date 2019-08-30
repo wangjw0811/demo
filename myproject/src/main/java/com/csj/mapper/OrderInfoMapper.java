@@ -1,6 +1,6 @@
-package com.mapper;
+package com.csj.mapper;
 
-import com.entity.OrderInfo;
+import com.csj.entity.OrderInfo;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

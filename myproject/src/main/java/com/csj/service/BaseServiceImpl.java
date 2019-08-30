@@ -1,4 +1,4 @@
-package com.service;
+package com.csj.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

@@ -1,8 +1,9 @@
-package com.controller;
+package com.csj.controller;
 
-import com.entity.OrderInfo;
+import com.csj.entity.OrderInfo;
 import com.github.pagehelper.PageInfo;
-import com.service.IOrderInfoService;
+import com.csj.service.IOrderInfoService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,12 +14,22 @@ import java.util.List;
  * @author: jims wang
  * @createdate: 2019-08-28 16:30:15
  **/
+@Slf4j
 @RestController
 @RequestMapping("orderInfo")
 public class OrderInfoController {
 
     @Autowired
     IOrderInfoService orderInfoService;
+
+    // 测试自定义mapper
+    @GetMapping("mySearch")
+    public List<OrderInfo> mySearch(){
+        if(log.isDebugEnabled()){
+            log.debug("测试日志输出debug");
+        }
+        return orderInfoService.mySearch();
+    }
 
     // 新建订单
     @PostMapping
@@ -66,12 +77,6 @@ public class OrderInfoController {
     @PostMapping("withConditions")
     public List<OrderInfo> selectAllByConditions(@RequestBody OrderInfo orderInfo){
         return orderInfoService.select(orderInfo);
-    }
-
-    // 测试自定义mapper
-    @GetMapping("mySearch")
-    public List<OrderInfo> mySearch(){
-        return orderInfoService.mySearch();
     }
 
     // 分页查询订列表

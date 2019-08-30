@@ -1,4 +1,4 @@
-package com.entity;
+package com.csj.entity;
 
 import lombok.Data;
 import tk.mybatis.mapper.annotation.LogicDelete;
